@@ -1,6 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:sol_ventus/screens/main_screen.dart';
+import 'package:sol_ventus/screens/welcome/welcome_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class SplashScreen extends StatelessWidget {
         animationDuration: const Duration(milliseconds: 1500),
         splashIconSize: 500,
         splash: 'assets/images/splash_final.png',
-        nextScreen: const MainScreen(),
+        nextScreen: const WelcomeScreen(),
       ),
     );
   }

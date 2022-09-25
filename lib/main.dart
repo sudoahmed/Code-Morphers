@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sol_ventus/screens/splash_screen.dart';
+import 'package:sol_ventus/screens/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Sol Ventus',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.amber,
       ),
       home: const SplashScreen(),
     );
