@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sol_ventus/constants/style_constants.dart';
-import 'package:typewritertext/typewritertext.dart';
+
+import '../../shared_components/info_paragraph_widget.dart';
+import '../../shared_components/type_writer_animated_title.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -15,19 +17,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     super.initState();
     Future.delayed(const Duration(seconds: 8), () {
       setState(() {
-        isVisible = true;
+        _isVisible = true;
       });
     });
   }
 
-  bool isVisible = false;
+  bool _isVisible = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(
+        onPressed: () {
+          Navigator.pushNamed(context, '/info1');
+        },
+        child: const Icon(
           Icons.arrow_forward,
           size: 32,
         ),
@@ -45,35 +49,24 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             child: ListView(
               // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const TypeWriterText(
+                const SizedBox(
+                  height: 40,
+                ),
+                const TypeWriterAnimTitle(
+                  animatedTitle:
+                      'Hey\n\nWelcome to the Sol Ventus\n\nSpace Traveller',
                   alignment: Alignment.center,
-                  text: Text(
-                    '\nHey\n\nWelcome to the Sol Ventus\n\nSpace Traveller',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: kDefaultTextColor,
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.2,
-                        wordSpacing: 2,
-                        fontFamily: 'SpecialElite'),
-                  ),
-                  duration: Duration(milliseconds: 150),
                 ),
                 AnimatedOpacity(
-                  opacity: isVisible ? 1.0 : 0.0,
+                  opacity: _isVisible ? 1.0 : 0.0,
                   duration: const Duration(milliseconds: 1000),
-                  child: Container(
-                    margin: const EdgeInsets.symmetric(vertical: 25),
-                    child: const Text(
-                      "Sol Ventus is a Latin term means 'Sun Wind'. This App is related to Solar Wind, it's effects and much much more. This app will make you feel the things you can't experience while being on earth.",
-                      style:
-                          kDescTextStyle, //TODO: Extract Description Text Box Widget and Apply animation by wrapping it in a Container.
-                    ),
+                  child: const InfoParaText(
+                    infoText:
+                        "Sol Ventus is a Latin term means 'Sun Wind'. This App is related to Solar Wind, it's effects and much much more. This app will make you feel the things you can't experience while being on earth.",
                   ),
                 ),
                 AnimatedOpacity(
-                  opacity: isVisible ? 1.0 : 0.0,
+                  opacity: _isVisible ? 1.0 : 0.0,
                   duration: const Duration(milliseconds: 1000),
                   child: Container(
                     margin: const EdgeInsets.symmetric(vertical: 25),
@@ -85,7 +78,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                 ),
                 AnimatedOpacity(
-                  opacity: isVisible ? 1.0 : 0.0,
+                  opacity: _isVisible ? 1.0 : 0.0,
                   duration: const Duration(milliseconds: 1000),
                   child: Container(
                     margin: const EdgeInsets.symmetric(
@@ -98,7 +91,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                 ),
                 AnimatedOpacity(
-                  opacity: isVisible ? 1.0 : 0.0,
+                  opacity: _isVisible ? 1.0 : 0.0,
                   duration: const Duration(milliseconds: 1000),
                   child: Container(
                     margin: const EdgeInsets.symmetric(
@@ -111,7 +104,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                 ),
                 AnimatedOpacity(
-                  opacity: isVisible ? 1.0 : 0.0,
+                  opacity: _isVisible ? 1.0 : 0.0,
                   duration: const Duration(milliseconds: 1000),
                   child: Container(
                     margin: const EdgeInsets.symmetric(
@@ -124,7 +117,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                 ),
                 AnimatedOpacity(
-                  opacity: isVisible ? 1.0 : 0.0,
+                  opacity: _isVisible ? 1.0 : 0.0,
                   duration: const Duration(milliseconds: 1000),
                   child: Container(
                     margin: const EdgeInsets.symmetric(
