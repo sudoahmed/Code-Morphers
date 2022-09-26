@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:sol_ventus/shared_components/info_paragraph_widget.dart';
-import 'package:sol_ventus/shared_components/type_writer_animated_title.dart';
 
-class InfoScreen1 extends StatefulWidget {
-  const InfoScreen1({Key? key}) : super(key: key);
+import '../../shared_components/info_paragraph_widget.dart';
+import '../../shared_components/type_writer_animated_title.dart';
+
+class InfoScreen2 extends StatefulWidget {
+  const InfoScreen2({Key? key}) : super(key: key);
 
   @override
-  State<InfoScreen1> createState() => _InfoScreen1State();
+  State<InfoScreen2> createState() => _InfoScreen2State();
 }
 
-class _InfoScreen1State extends State<InfoScreen1> {
+class _InfoScreen2State extends State<InfoScreen2> {
   @override
   void initState() {
     // TODO: implement initState
@@ -28,7 +29,7 @@ class _InfoScreen1State extends State<InfoScreen1> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/info2');
+          Navigator.pushNamed(context, '/info3');
         },
         child: const Icon(
           Icons.arrow_forward,
@@ -51,14 +52,14 @@ class _InfoScreen1State extends State<InfoScreen1> {
                   height: 45,
                 ),
                 const TypeWriterAnimTitle(
-                  animatedTitle: 'What is Solar Wind ?',
+                  animatedTitle: 'What is Solar Weather ?',
                   alignment: Alignment.topLeft,
                 ),
                 AnimatedOpacity(
                   opacity: _isVisible ? 1.0 : 0.0,
                   duration: const Duration(milliseconds: 1000),
                   child: Image.asset(
-                    'assets/images/gifs/solar-wind.gif', //
+                    'assets/images/gifs/solar-wind.gif', //TODO:Change it to respective image of Solar Weather!!!
                     width: 300,
                     height: 300,
                   ),
@@ -68,7 +69,7 @@ class _InfoScreen1State extends State<InfoScreen1> {
                   duration: const Duration(milliseconds: 1000),
                   child: const InfoParaText(
                       infoText:
-                          'The solar wind is a stream of charged particles released from the upper atmosphere of the Sun, called the corona. This plasma mostly consists of electrons, protons and alpha particles with kinetic energy between 0.5 and 10 keV. The composition of the solar wind plasma also includes a mixture of materials found in the solar plasma: trace amounts of heavy ions and atomic nuclei such as C, N, O, Ne, Mg, Si, S, and Fe. There are also rarer traces of some other nuclei and isotopes such as P, Ti, Cr, 54Fe and 56Fe, and 58Ni, 60Ni, and 62Ni.'),
+                          "Space doesn’t have air, but it does have weather. This weather comes from the Sun: the high-energy light emitted by the Sun and the electrically charged particles known as the solar wind, which can have a profound effect on Earth and other worlds in the Solar SystemSpace weather can produce electromagnetic fields that induce extreme currents in wires, disrupting power lines, and even causing widespread power outages. Severe space weather also produces solar energetic particles, which can damage satellites used for commercial communications, global positioning, intelligence gathering and weather forecasting."),
                 ),
               ],
             ),
