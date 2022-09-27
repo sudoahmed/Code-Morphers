@@ -37,6 +37,8 @@ dependencies:
   animated_splash_screen: ^1.3.0
   typewritertext: ^1.6.0
   youtube_player_flutter: ^8.1.0
+  lottie: ^1.4.3
+  audioplayers: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +66,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/gifs/
+    - assets/music/
 #    - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

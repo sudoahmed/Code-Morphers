@@ -3,6 +3,7 @@ import 'package:sol_ventus/screens/info_screen_1/info_screen_1.dart';
 import 'package:sol_ventus/screens/info_screen_2/info_screen_2.dart';
 import 'package:sol_ventus/screens/info_screen_3/info_screen_3.dart';
 import 'package:sol_ventus/screens/info_screen_4/info_screen_4.dart';
+import 'package:sol_ventus/screens/music_screen/music_sreen.dart';
 import 'package:sol_ventus/screens/splash/splash_screen.dart';
 import 'package:sol_ventus/screens/welcome/welcome_screen.dart';
 
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/info2': (context) => const InfoScreen2(),
         '/info3': (context) => const InfoScreen3(),
         '/info4': (context) => const InfoScreen4(),
+        '/musicscreen': (context) => const MusicScreen(),
       },
     );
   }

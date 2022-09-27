@@ -45,7 +45,7 @@ class _InfoScreen4State extends State<InfoScreen4> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Navigator.pushNamed(context, '/info4') //TODO: Add Main Menu Navigation!!!;
+          Navigator.pushNamed(context, '/musicscreen'); //TODO: Add Main Menu Navigation!!!;
         },
         child: const Icon(
           Icons.arrow_forward,
