@@ -29,7 +29,7 @@ class _InfoScreen4State extends State<InfoScreen4> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 3), () {
       setState(() {
         _isVisible = true;
       });
@@ -45,7 +45,8 @@ class _InfoScreen4State extends State<InfoScreen4> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/musicscreen'); //TODO: Add Main Menu Navigation!!!;
+          Navigator.pushNamed(
+              context, '/menuScreen'); //TODO: Add Main Menu Navigation!!!;
         },
         child: const Icon(
           Icons.arrow_forward,
@@ -65,11 +66,14 @@ class _InfoScreen4State extends State<InfoScreen4> {
             child: ListView(
               children: [
                 const SizedBox(
-                  height: 45,
+                  height: 40,
                 ),
                 const TypeWriterAnimTitle(
                   animatedTitle: 'What is Parker Solar Probe ?',
                   alignment: Alignment.topLeft,
+                ),
+                const SizedBox(
+                  height: 20,
                 ),
                 AnimatedOpacity(
                   opacity: _isVisible ? 1.0 : 0.0,

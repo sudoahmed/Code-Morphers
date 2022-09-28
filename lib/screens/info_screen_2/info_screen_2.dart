@@ -15,7 +15,7 @@ class _InfoScreen2State extends State<InfoScreen2> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 2), () {
       setState(() {
         _isVisible = true;
       });

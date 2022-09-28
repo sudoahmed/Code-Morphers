@@ -31,7 +31,7 @@ class _InfoScreen3State extends State<InfoScreen3> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 3), () {
       setState(() {
         _isVisible = true;
       });
@@ -67,11 +67,14 @@ class _InfoScreen3State extends State<InfoScreen3> {
             child: ListView(
               children: [
                 const SizedBox(
-                  height: 45,
+                  height: 40,
                 ),
                 const TypeWriterAnimTitle(
                   animatedTitle: 'Why Space Weather is so Important ?',
                   alignment: Alignment.topLeft,
+                ),
+                const SizedBox(
+                  height: 20,
                 ),
                 AnimatedOpacity(
                   opacity: _isVisible ? 1.0 : 0.0,

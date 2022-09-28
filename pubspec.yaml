@@ -26,6 +26,13 @@ environment:
 # dependencies can be manually updated by changing the version numbers below to
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
+
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/launch_icon.png"
+
 dependencies:
   flutter:
     sdk: flutter
@@ -39,6 +46,7 @@ dependencies:
   youtube_player_flutter: ^8.1.0
   lottie: ^1.4.3
   audioplayers: ^1.1.0
+  flutter_launcher_icons: ^0.10.0
 
 dev_dependencies:
   flutter_test:

@@ -28,7 +28,7 @@ class TypeWriterAnimTitle extends StatelessWidget {
             wordSpacing: 2,
             fontFamily: 'SpecialElite'),
       ),
-      duration: const Duration(milliseconds: 150),
+      duration: const Duration(milliseconds: 100),
     );
   }
 }
