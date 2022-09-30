@@ -29,15 +29,6 @@ class _MenuScreenState extends State<MenuScreen> {
     return Scaffold(
       appBar: CustomAppBar().buildCustomAppBar(context),
       drawer: Drawer(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Navigator.pushNamed(context, '/info1');
-        },
-        child: const Icon(
-          Icons.arrow_forward,
-          size: 32,
-        ),
-      ),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -75,7 +66,7 @@ class _MenuScreenState extends State<MenuScreen> {
                           MenuCard(
                             cardText: 'Space Music',
                             cardImageAssetString:
-                                'assets/images/launch_icon.png',
+                                'assets/images/space-music-final.jpeg',
                             buttonCallBack: () {
                               Navigator.pushNamed(context, '/musicScreen');
                             },
@@ -95,16 +86,14 @@ class _MenuScreenState extends State<MenuScreen> {
                         children: [
                           MenuCard(
                             cardText: 'Vibro Wind',
-                            cardImageAssetString:
-                                'assets/images/launch_icon.png',
+                            cardImageAssetString: 'assets/images/vibration.png',
                             buttonCallBack: () {
                               print('3');
                             },
                           ),
                           MenuCard(
                             cardText: 'Solar Data Charts',
-                            cardImageAssetString:
-                                'assets/images/launch_icon.png',
+                            cardImageAssetString: 'assets/images/graph.jpeg',
                             buttonCallBack: () {
                               print('4');
                             },
