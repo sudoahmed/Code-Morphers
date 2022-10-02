@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sol_ventus/shared_components/custom_appbar.dart';
 
+import '../../Services/solar-wind-data-service.dart';
 import '../../shared_components/type_writer_animated_title.dart';
 import 'components/menu_card.dart';
 
@@ -28,7 +29,7 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar().buildCustomAppBar(context),
-      drawer: Drawer(),
+      drawer: const Drawer(),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -94,8 +95,9 @@ class _MenuScreenState extends State<MenuScreen> {
                           MenuCard(
                             cardText: 'Solar Data Charts',
                             cardImageAssetString: 'assets/images/graph.jpeg',
-                            buttonCallBack: () {
-                              print('4');
+                            buttonCallBack: () async {
+                              Navigator.pushNamed(
+                                  context, '/solarDataChartsScreen');
                             },
                           ),
                           // MenuCard(),
